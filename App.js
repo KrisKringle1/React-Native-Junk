@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 import Header from './components/Header';
-import ListItem from './components/ListItem'
+import ListItem from './components/ListItem';
 
 
 const App = () => {
@@ -20,14 +20,19 @@ const App = () => {
     { id: uuid(), text: 'Cheese' },
   ]);
 
-
-  return (
-    <View style={styles.container}>
-      <Header title='Shopping List' />
-      <FlatList data={items} renderItem={({ item }) => <ListItem item={item} />}
-      />
-    </View>
-  );
+  const deleteItem = (id) = {
+    setItems(prevItems => {
+  return prevItems.filter(item => item.id != id)
+});
+}
+return (
+  <View style={styles.container}>
+    <Header />
+    <FlatList data={items}
+      renderItem={({ item }) => <ListItem item={item} deleteItem={deleteItem} />}
+    />
+  </View>
+);
 };
 
 const styles = StyleSheet.create({
