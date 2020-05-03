@@ -22,5 +22,5 @@ A simple shopping list to demonstrate React Native
 
 ## Preview
 
-![alt text](https://github.com/KrisKringle1/wicked-sales-final/blob/master/get-beer-here-demo.gif)
+![alt text](https://github.com/KrisKringle1/React-Native-Shopping-List/blob/master/React-Native-Shopping-List-Demo.gif)
 
